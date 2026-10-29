@@ -1,0 +1,394 @@
+/* XFWM theme colors */
+.gtkstyle-fallback:selected:not(:focus) {
+	color: @active_titlebar_text;
+        background-color: @active_titlebar;
+}
+
+.gtkstyle-fallback:disabled {
+	color: @inactive_titlebar_text;
+        background-color: @inactive_titlebar;
+}
+
+/* Magic color names that Thunar uses */
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_unfocused_selected_bg_color @selected_bg_color;
+
+/* Focus indicators + disable symbolic icons */
+* {
+	outline: 1px dotted @fg_color;
+	outline-offset: -2px;
+	-gtk-icon-style: regular;
+}
+
+/* Text and background color */
+.background, button, calendar.header, check:hover, combobox menu, frame,
+headerbar, menu, menubar,notebook, paned, radio:hover, slider,
+scrollbar button, tab:checked, .toolbar {
+	color: @fg_color;
+	background-color: @bg_color;
+}
+
+button, slider {
+	background: linear-gradient(shade(@bg_color, 0.825), shade(@bg_color, 1.07));
+}
+button.flat, toolbar button:disabled, toolbar image:disabled { 
+	background: @bg_color
+}
+
+.textview, .view, check, iconview, list, radio,
+textview text, sidebar treeview, view {
+	color: @fg_color;
+	background-color: @base_color;
+}
+
+entry {
+	color: @entry_fg_color;
+	background-color: @entry_bg_color;
+}
+
+levelbar .filled, progress, switch:checked, :selected, selection, 
+XfdesktopIconView.label:selected {
+	color: @selected_fg_color;
+	background-color: @selected_bg_color;
+}
+levelbar .filled, progress, treeview.view.progressbar {
+	border-radius: 2px;
+}
+
+button:checked, calendar.highlight, progressbar, switch,
+trough, tab {
+        background-color: shade(@bg_color, 0.82);
+}
+button:checked, progressbar, switch, trough {
+	background: linear-gradient(shade(@bg_color, 0.7), shade(@bg_color, 1.1));
+}
+tab button.flat {
+	background: transparent;
+}
+scrollbar.vertical trough {
+	background: linear-gradient(90deg, shade(@bg_color, 0.7), shade(@bg_color, 1.1));
+}
+
+*:disabled {
+	color: @insensitive_fg_color;
+	text-shadow: 1px 1px 0 @illumination;
+}
+
+button:hover, menuitem:hover {
+	color: @selected_fg_color;
+	background-color: @hover_bg_color;
+}
+
+*:selected:not(:focus), selection:not(:focus) {
+	color: @fg_color;
+	background-color: shade(@bg_color, 0.82);
+}
+
+button:hover, button.flat:hover, levelbar .filled, menuitem:hover,
+progress, switch:checked, treeview.view.progressbar {
+	background: linear-gradient(@hover_bg_color, shade(@hover_bg_color, 2.05));
+	border: 1px solid shade(@hover_bg_color, 0.82);
+}
+
+slider, tooltip {
+	border: 1px solid @border_color;
+}
+
+tooltip.background {
+	background-color: #ffff50;
+}
+
+separator {
+	background-color: @shadow;
+}
+
+.rubberband, XfdesktopIconView .rubberband {
+	background-color: alpha(@selected_bg_color, .3);
+	border: 1px solid @selected_bg_color;
+}
+
+filechooser {
+	margin: 6px;
+}
+
+.dialog-action-box {
+	margin-bottom: 3px;
+}
+
+.dialog-action-box button, factionbar {
+	margin: 0 0 0 2px;
+}
+
+/* Sizes and margins */
+arrow, button, check, entry,
+radio, slider, tab {
+	min-width: 13px;
+	min-height: 13px;
+}
+
+switch {
+	min-width: 50px;
+	min-height: 25px;
+}
+
+entry, menuitem, tab, tab label {
+	padding: 2px;
+}
+
+button { padding: 4px; }
+
+checkbutton, radiobutton, separator, stackswitcher button {
+	margin: 2px;
+}
+
+progressbar.vertical progress, levelbar.vertical .filled {
+	min-width: 18px;
+}
+progressbar.vertical trough { min-width: 20px; }
+
+progressbar.horizontal progress, levelbar.horizontal .filled {
+	min-height: 16px;
+}
+progressbar.horizontal trough { min-height: 18px }
+
+scale.horizontal trough {
+	padding: 0 15px;
+}
+scale.vertical trough {
+	padding: 15px 0;
+}
+scale slider { margin: -1px }
+scale.horizontal slider {
+	min-width: 30px;
+}
+scale.vertical slider {
+	min-height: 30px;
+}
+
+scrollbar button {
+	margin: 0px;
+	padding: 0px;
+}
+
+separator {
+	min-width: 1px;
+	min-height: 1px;
+}
+
+paned separator {
+	min-width: 5px;
+	min-height: 5px;
+        box-shadow: 1px 1px 0 0 @illumination inset, -1px -1px 0 0px @border_color inset;
+	background: transparent;
+}
+
+menubar > menuitem, stackswitcher button {
+	padding: 4px;
+}
+
+/* Borders and outlines */
+#XfcePanelWindow { border: 0 }
+
+notebook {
+	padding: 3px; /* needed for negative tab margins */
+}
+frame.border-groove { border: 2px groove @border_color; }
+frame.border-inset { border: 1px inset @border_color; }
+frame.border-outset { border: 1px outset @border_color; }
+frame.border-ridge { border: 2px ridge @border_color; }
+
+button, calendar, calendar.header, entry, levelbar, progressbar,
+scrolledwindow, switch {
+	border: 1px solid @border_color;
+}
+
+scale, scrollbar {
+	border-color: shade(@bg_color, 0.7);
+}
+
+button, calendar, calendar.header, entry, switch {
+	border-radius: 2px;
+}
+
+scrollbar button {
+	border-radius: 0;
+}
+
+menuitem, notebook tab > box {
+	border: 1px solid transparent;
+}
+
+button, calendar.header, slider, #XfcePanelWindow {
+	box-shadow: 1px 1px 0 0 @illumination inset, -1px -1px 0 0px @shadow inset;
+}
+
+button:hover, button:checked:hover, button.flat:hover,
+menuitem:hover, scale slider:hover {
+        box-shadow: 1px 1px 0 0 shade(@hover_bg_color, 1.47) inset, 
+                        -1px -1px 0 0px shade(@hover_bg_color, 1.15) inset;
+}
+
+buttonbox button.default:not(:focus){
+	box-shadow: 1px 1px 0 0 @illumination inset, -1px -1px 0 0px @shadow inset,
+		 4px 4px 0px 1px @border_color, 3px 3px 0px 1px @bg_color,
+		-4px -4px 0px 1px @border_color, -3px -3px 0px 1px @bg_color,
+		-4px 4px 0px 1px @border_color, -3px 3px 0px 1px @bg_color,
+		4px -4px 0px 1px @border_color, 3px -3px 0px 1px @bg_color;
+}
+
+button:checked, switch {
+	box-shadow: -1px -1px 0 0 @illumination inset, 1px 1px 0 0px @shadow inset;
+}
+
+button:focus, button.default, switch slider:focus {
+	outline-offset: -6px;
+}
+
+notebook:focus tab { outline-offset: -5px }
+
+scale:focus trough {
+	outline-offset: 3px;
+}
+
+button:active, .xfce4-panel button:active {
+	background-color: @active_bg_color;
+	border: 1px solid shade(@active_bg_color, 0.7);
+	box-shadow: 0 0 0 1px @fg_color;
+}
+
+stack, tab {
+	border: 1px @border_color outset; 	
+}
+
+tab {
+	box-shadow: none;
+	border-radius: 0px;
+}
+
+header.top tab {
+	border-bottom:none;
+}
+header.bottom tab {
+	border-top:none;
+}
+header.left tab {
+	border-right:none;
+}
+header.right tab {
+	border-left:none;
+}
+
+header.top tab:checked {
+	margin: -2px 0 -1px;
+}
+header.bottom tab:checked {
+	margin: -1px 0 -2px;
+}
+header.left tab:checked {
+	margin: 0 -1px 0 -2px;
+}
+header.right tab:checked {
+	margin: 0 -2px 0 -1px;
+} 
+ 
+menu {
+	border: 1px outset @border_color;
+	padding: 2px;
+}
+
+button.flat {
+	border: 1px solid transparent;
+	box-shadow: none;
+}
+
+switch:checked {
+	box-shadow: -1px -1px 0 0 shade(@selected_bg_color, 1.4) inset,
+		1px 1px 0 0px shade(@selected_bg_color, .9) inset;
+}
+
+check, radio {
+	border: 1px inset @border_color;
+	padding: 0px;
+	margin: 3px;
+}
+
+radio {
+	border-radius: 99px;
+}
+
+separator {
+	box-shadow: 1px 1px 0 0 @illumination;
+}
+
+/* Icons */
+*:disabled {
+	-gtk-icon-effect: dim;
+}
+
+check, arrow, scrollbar button {
+	background-repeat: no-repeat;
+	background-position: center center;
+	-gtk-icon-source: none;
+}
+
+scale.vertical slider, scrollbar.vertical slider {
+        background: repeating-linear-gradient(@border_color, @border_color 1px, @illumination 1px, @illumination 2px) 3px calc(50% + 0.25px) @bg_color, 
+		linear-gradient(90deg, shade(@bg_color, 0.825), shade(@bg_color, 1.07));
+        background-size: 7px 10px, 100% 100%;
+        background-repeat: no-repeat;
+}
+
+scale.horizontal slider, scrollbar.horizontal slider {
+	background: repeating-linear-gradient(90deg, @border_color, @border_color 1px, @illumination 1px, @illumination 2px) calc(50% + 0.25px) 3px @bg_color,
+		linear-gradient(shade(@bg_color, 0.825), shade(@bg_color, 1.07));
+	background-size: 10px 7px, 100% 100%;
+	background-repeat: no-repeat;
+}
+
+scale.vertical slider:hover {
+        background: repeating-linear-gradient(shade(@hover_bg_color, 0.82), shade(@hover_bg_color, 0.82) 1px, transparent 1px, transparent 2px) 3px calc(50% + 0.25px) @bg_color, 
+		linear-gradient(@hover_bg_color, shade(@hover_bg_color, 2.05));
+        background-size: 7px 10px, 100% 100%;
+	border: 1px solid shade(@hover_bg_color, 0.82);
+	background-repeat: no-repeat;
+}
+
+scale.horizontal slider:hover {
+	background: repeating-linear-gradient(90deg, shade(@hover_bg_color, 0.82), shade(@hover_bg_color, 0.82) 1px, transparent 1px, transparent 2px) calc(50% + 0.25px) 3px @bg_color,
+		linear-gradient(@hover_bg_color, shade(@hover_bg_color, 2.05));
+	background-size: 10px 7px, 100% 100%;
+	border: 1px solid shade(@hover_bg_color, 0.82);
+	background-repeat: no-repeat;
+}
+
+scrollbar.vertical button.up {
+	background-image: url("up.png")
+}
+
+combobox arrow, expander arrow:checked, scrollbar.vertical button.down {
+	background-image: url("down.png")
+}
+
+combobox button:disabled arrow {
+	background-image: url("down-disabled.png");
+}
+
+scrollbar.horizontal button.up, menuitem arrow:dir(rtl) {
+	background-image: url("left.png")
+}
+
+expander arrow, scrollbar.horizontal button.down, menuitem arrow:dir(ltr) {
+	background-image: url("right.png");
+}
+
+check:checked {
+	background-image: url("checkmark.png");
+}
+
+menu radio:checked {
+	background: radial-gradient(circle at 51% 52%, @fg_color 25%, @base_color 25%);
+}
+
+spinner:checked {
+	animation: spin;
+}
