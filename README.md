@@ -1,6 +1,6 @@
 
 # xfce-gtk3-themes
-Building on my [xfce3-revival-theme](https://github.com/uityyy/xfce3-revival-theme) replicating XFCE 3's GTK1 theme, this project aims to recreate the old GTK2 themes found in the [gtk2-engines-xfce package](https://tracker.debian.org/pkg/gtk2-engines-xfce), This is not a pixel-perfect recreation. Even the latest GTK2 "Xfce-4.0" theme does not perfectly match what actual Xfce 4.0 had (eg. in Slackware 10.0), and my GTK3 equivalent differs from both versions to an extent similar to their differences from each other.
+Building on my [xfce3-revival-theme](https://github.com/uityyy/xfce3-revival-theme) replicating XFCE 3's GTK1 theme, this project aims to recreate the old GTK2 themes found in the [gtk2-engines-xfce package](https://tracker.debian.org/pkg/gtk2-engines-xfce). This is not a pixel-perfect recreation. Even the latest GTK2 "Xfce-4.0" theme does not perfectly match what actual Xfce 4.0 had (eg. in Slackware 10.0), and my GTK3 equivalent differs from both versions to an extent similar to their differences from each other.
 
 __These themes are in no way endorsed or supported by the XFCE desktop.__ Please direct all pleas for help to me. I'm the madman trying to bring 2003 XFCE's looks to 2026's XFCE.
 
