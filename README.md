@@ -6,6 +6,7 @@ __These themes are in no way endorsed or supported by the XFCE desktop.__ Please
 
 ## Progress
 - Only the Xfce-4.0 theme is ready so far. More will hopefully follow.
+![The Xfce-4.0 GTK3 theme from xfce-gtk3-themes](Xfce-4.0-theme-example.png)
 
 ## Usage
 - GTK2 styles are not included, becase these themes are designed as a GTK3 overlay to accompany the existing GTK2 themes. That is why I used the original names.
